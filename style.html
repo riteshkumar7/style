@@ -1,0 +1,96 @@
+<html>
+<head>
+  <style>
+    div {
+      border: 2px solid red;
+      width: 500px;
+      margin: 300px;
+      padding: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div> 
+    <p id="main-heading">WELCOME IN JAVA SCRIPT</p>
+    <select id="text-color-select">
+      <option>text color</option>
+      <option value="green">Green</option>
+      <option value="pink">Pink</option>
+      <option value="yellow">Yellow</option>
+    </select>
+    <select id="bg-color-select">
+      <option>background color</option>
+      <option value="green">Green</option>
+      <option value="pink">Pink</option>
+      <option value="yellow">Yellow</option>
+    </select>
+    Font-Size:
+    <select id="size-select">
+      <option>1</option>
+      <option>2</option>
+      <option>3</option>
+      <option>4</option>
+	  <option>5</option>
+	  <option>6</option>
+	  <option>7</option>
+	  <option>8</option>
+	  <option>9</option>
+	  <option>10</option>
+	  <option>11</option>
+	  <option>12</option>
+	  <option>13</option>
+	  <option>14</option>
+	  <option>15</option>
+	  <option>16</option>
+	  <option>17</option>
+	  <option>18</option>
+	  <option>19</option>
+	  <option>20</option>
+    </select>
+    <button id="bold-button">B</button>
+    <button id="italic-button">I</button>
+    <button id="underline-button">U</button>
+    <br>
+    <br>
+  </div>
+
+  <script>
+    
+    var textColorSelect = document.getElementById('text-color-select');
+    var bgColorSelect = document.getElementById('bg-color-select');
+    var sizeSelect = document.getElementById('size-select');
+   
+    var boldButton = document.getElementById('bold-button');
+    var italicButton = document.getElementById('italic-button');
+    var underlineButton = document.getElementById('underline-button');
+    var headingElement = document.getElementById('main-heading');
+
+  
+    textColorSelect.addEventListener('change', function() {
+      headingElement.style.color = textColorSelect.value;
+    });
+
+  
+    bgColorSelect.addEventListener('change', function() {
+      headingElement.style.backgroundColor = bgColorSelect.value;
+    });
+
+    
+    sizeSelect.addEventListener('change', function() {
+      headingElement.style.fontSize = sizeSelect.value + 'px';
+    });
+
+    boldButton.addEventListener('click', function() {
+      headingElement.style.fontWeight = 'bold';
+    });
+
+    italicButton.addEventListener('click', function() {
+      headingElement.style.fontStyle = 'italic';
+    });
+
+    underlineButton.addEventListener('click', function() {
+      headingElement.style.textDecoration = 'underline';
+    });
+  </script>
+</body>
+</html>
